@@ -1,0 +1,17 @@
+# Gitpod configuration for the portfolio repo
+# Opens a workspace, installs dependencies and runs the dev server on port 3000
+
+image: gitpod/workspace-full
+
+tasks:
+  - init: npm install
+    command: npm run dev
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
