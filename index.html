@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kamal Prajapati — Portfolio</title>
+  <meta name="description" content="Portfolio — Kamal Prajapati. Full-stack engineer. React, Next.js, Node.js." />
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#4f46e5;--radius:10px;--shadow:0 6px 18px rgba(15,23,42,0.06);font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color-scheme: light}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%);display:flex;align-items:flex-start;justify-content:center;padding:32px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .container{width:100%;max-width:960px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eef2ff;padding-bottom:12px}
+    header h1{margin:0;font-size:20px}
+    nav a{margin-left:12px;color:var(--muted);text-decoration:none}
+    .hero{display:flex;gap:18px;align-items:center;padding-top:18px}
+    .avatar{width:84px;height:84px;border-radius:999px;background:linear-gradient(90deg,#a78bfa,#4f46e5);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
+    .hero h2{margin:0;font-size:26px}
+    .subtitle{margin:6px 0 0;color:var(--muted);font-size:14px}
+    section{margin-top:22px}
+    h3{margin:0 0 8px 0;font-size:18px}
+    p{color:#0f172a}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .card{background:#fff;border:1px solid #f0f2f5;padding:12px;border-radius:10px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f8fafc;padding:6px 8px;border-radius:999px;color:var(--muted);font-size:13px}
+    footer{border-top:1px solid #eef2ff;margin-top:20px;padding-top:12px;color:var(--muted);font-size:13px}
+    /* To-Do styles (scoped under #todo-app) */
+    #todo-app{margin-top:18px}
+    #todo-app .input-row{display:flex;gap:10px}
+    #todo-app input[type="text"]{flex:1;padding:10px;border-radius:10px;border:1px solid #e6e9ef;font-size:14px}
+    #todo-app button{padding:10px 12px;border-radius:10px;border:1px solid #e6e9ef;background:var(--accent);color:white;cursor:pointer}
+    #todo-list{list-style:none;padding:0;margin:14px 0 6px;display:flex;flex-direction:column;gap:8px}
+    .todo-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;border:1px solid #f0f2f5;background:linear-gradient(180deg,#fff,#fbfbff)}
+    .checkbox{width:18px;height:18px;border-radius:6px;border:1px solid #d1d5db;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+    .todo-item.completed .checkbox{background:linear-gradient(90deg,#a78bfa,#4f46e5);border-color:transparent;color:white}
+    .todo-item .text{flex:1}
+    .todo-actions button{background:transparent;border:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:6px}
+    .empty{padding:18px;text-align:center;color:var(--muted);background:#fff;border-radius:8px;border:1px dashed #eef2ff}
+    @media (max-width:640px){.hero{flex-direction:column;align-items:flex-start}.avatar{width:64px;height:64px}}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div>
+        <h1>Kamal Prajapati</h1>
+        <div style="color:var(--muted);font-size:13px">Full‑stack engineer • React, Next.js & Node.js</div>
+      </div>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#todo">To‑Do</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="avatar" aria-hidden="true">KP</div>
+      <div>
+        <h2 id="hero-title">Kamal Prajapati</h2>
+        <div class="subtitle">I build accessible, performant web applications.</div>
+        <div style="margin-top:10px"><a href="#projects" style="background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none">See my work</a></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h3>About</h3>
+      <p>I’m Kamal — a professional full‑stack engineer focused on building accessible and performant web applications. I work with React, Next.js and Node.js to deliver polished user experiences.</p>
+    </section>
+
+    <section id="projects">
+      <h3>Selected Projects</h3>
+      <div class="grid">
+        <div class="card">
+          <strong>Project Alpha</strong>
+          <p style="margin:8px 0 0;color:var(--muted);font-size:14px">A short description of Project Alpha. Built with Next.js and Tailwind CSS.</p>
+        </div>
+        <div class="card">
+          <strong>Project Beta</strong>
+          <p style="margin:8px 0 0;color:var(--muted);font-size:14px">API, scraping and automation tools with Node.js and Express.</p>
+        </div>
+        <div class="card">
+          <strong>Project Gamma</strong>
+          <p style="margin:8px 0 0;color:var(--muted);font-size:14px">Data visualisations and charts with React and D3.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill">JavaScript</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">Next.js</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Tailwind CSS</div>
+        <div class="skill">Docker</div>
+      </div>
+    </section>
+
+    <section id="todo">
+      <h3>To‑Do (Local Storage)</h3>
+      <div id="todo-app">
+        <form id="todo-form" class="input-row" autocomplete="off">
+          <input id="todo-input" name="todo" type="text" placeholder="Add a new task and press Enter" aria-label="New task" required />
+          <button type="submit">Add</button>
+        </form>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+          <div>
+            <button id="filter-all">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+          </div>
+          <div><button id="clear-completed">Clear completed</button></div>
+        </div>
+
+        <ul id="todo-list" aria-live="polite"></ul>
+        <div id="items-left" style="color:var(--muted);font-size:13px">0 items left</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:kamal@example.com">kamal@example.com</a></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Kamal Prajapati · Built as a static fallback
+    </footer>
+  </div>
+
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ------------------- To-Do App (single-file, localStorage) -------------------
+    (function(){
+      const STORAGE_KEY = 'todos-v1'
+      const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,8)
+      const todoForm = document.getElementById('todo-form')
+      const todoInput = document.getElementById('todo-input')
+      const todoList = document.getElementById('todo-list')
+      const itemsLeft = document.getElementById('items-left')
+      const clearCompletedBtn = document.getElementById('clear-completed')
+      const filterAllBtn = document.getElementById('filter-all')
+      const filterActiveBtn = document.getElementById('filter-active')
+      const filterCompletedBtn = document.getElementById('filter-completed')
+
+      let todos = []
+      let filter = 'all'
+
+      function load(){
+        try{const raw = localStorage.getItem(STORAGE_KEY); todos = raw ? JSON.parse(raw) : []}catch(e){console.error('load err',e); todos=[]}
+      }
+      function save(){localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))}
+
+      function addTodo(text){const t=text.trim(); if(!t) return; todos.unshift({id:uid(),text:t,completed:false,createdAt:Date.now()}); save(); render()}
+      function removeTodo(id){todos = todos.filter(t=>t.id!==id); save(); render()}
+      function toggleTodo(id){todos = todos.map(t=> t.id===id ? {...t,completed:!t.completed} : t); save(); render()}
+      function updateTodoText(id,newText){todos = todos.map(t=> t.id===id ? {...t, text:newText} : t); save(); render()}
+      function clearCompleted(){todos = todos.filter(t=>!t.completed); save(); render()}
+
+      function filteredTodos(){ if(filter==='active') return todos.filter(t=>!t.completed); if(filter==='completed') return todos.filter(t=>t.completed); return todos }
+
+      function beginEdit(id, textEl){ const original = textEl.textContent; const input = document.createElement('input'); input.type='text'; input.value=original; input.className='edit-input'; textEl.replaceWith(input); input.focus(); input.setSelectionRange(input.value.length, input.value.length);
+        function finish(){ const v = input.value.trim(); if(v) updateTodoText(id,v); else { if(confirm('Empty title — delete task?')) removeTodo(id); else updateTodoText(id, original) } }
+        input.addEventListener('blur', finish, {once:true}); input.addEventListener('keydown',(e)=>{ if(e.key==='Enter'){ input.blur() } if(e.key==='Escape'){ updateTodoText(id, original); render() } }) }
+
+      function render(){ todoList.innerHTML=''; const list = filteredTodos(); if(list.length===0){ todoList.innerHTML = '<div class="empty">No tasks — add one above ✨</div>' } else { const frag = document.createDocumentFragment(); list.forEach(task => {
+          const li = document.createElement('li'); li.className = 'todo-item' + (task.completed ? ' completed' : ''); li.dataset.id = task.id;
+          const cb = document.createElement('button'); cb.className='checkbox'; cb.setAttribute('aria-label', task.completed ? 'Mark as active' : 'Mark as completed'); cb.title = cb.getAttribute('aria-label'); cb.innerHTML = task.completed ? '✓' : ''; cb.addEventListener('click', ()=> toggleTodo(task.id));
+          const text = document.createElement('div'); text.className='text'; text.tabIndex=0; text.textContent = task.text; text.addEventListener('dblclick', ()=> beginEdit(task.id, text)); text.addEventListener('keypress', (e)=>{ if(e.key==='Enter') beginEdit(task.id, text) });
+          const actions = document.createElement('div'); actions.className='todo-actions'; const editBtn = document.createElement('button'); editBtn.title='Edit'; editBtn.innerHTML='✏️'; editBtn.addEventListener('click', ()=> beginEdit(task.id, text)); const delBtn = document.createElement('button'); delBtn.title='Delete'; delBtn.innerHTML='🗑️'; delBtn.addEventListener('click', ()=>{ if(confirm('Delete this task?')) removeTodo(task.id) }); actions.appendChild(editBtn); actions.appendChild(delBtn);
+          li.appendChild(cb); li.appendChild(text); li.appendChild(actions); frag.appendChild(li);
+        }); todoList.appendChild(frag); }
+        const left = todos.filter(t=>!t.completed).length; itemsLeft.textContent = `${left} item${left===1?'':'s'} left` }
+
+      // event bindings
+      todoForm.addEventListener('submit',(e)=>{ e.preventDefault(); addTodo(todoInput.value); todoInput.value=''; todoInput.focus(); })
+      clearCompletedBtn.addEventListener('click', ()=>{ if(todos.some(t=>t.completed)){ if(confirm('Remove all completed tasks?')) clearCompleted() } else { alert('No completed tasks to clear.') } })
+      filterAllBtn.addEventListener('click', ()=>{ filter='all'; render() })
+      filterActiveBtn.addEventListener('click', ()=>{ filter='active'; render() })
+      filterCompletedBtn.addEventListener('click', ()=>{ filter='completed'; render() })
+
+      // init
+      load(); render();
+    })();
+  </script>
+</body>
+</html>
