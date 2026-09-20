@@ -580,7 +580,7 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
 
       // Send directly to FormSubmit API
-      fetch('https://formsubmit.co/ajax/kamal.prajapati1@gmail.com', {
+      fetch('https://formsubmit.co/ajax/kamal.prajapatti@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = originalBtnHTML;
         submitBtn.disabled = false;
         // Fallback to mailto link
-        const mailtoUrl = `mailto:kamal.prajapati1@gmail.com?subject=${encodeURIComponent(
+        const mailtoUrl = `mailto:kamal.prajapatti@gmail.com?subject=${encodeURIComponent(
           `[Portfolio Contact] ${subject || 'New Message from ' + name}`
         )}&body=${encodeURIComponent(
           `Hi Kamal,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`

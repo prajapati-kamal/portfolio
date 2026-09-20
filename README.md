@@ -63,7 +63,7 @@ Then visit [http://localhost:8000](http://localhost:8000) in your browser.
 
 **Kamal Prajapati**  
 - 📍 New Delhi, India  
-- 📧 kamal.prajapati1@gmail.com  
+- 📧 kamal.prajapatti@gmail.com  
 - 📞 +91 9838422378  
 - 💼 [LinkedIn](https://linkedin.com/in/kamal-prajapati-1)  
 - 🐙 [GitHub](https://github.com/prajapati-kamal)  
