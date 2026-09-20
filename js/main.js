@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --------------------------------------------------------------------------
-  // 9. CONTACT FORM DISPATCH
+  // 9. CONTACT FORM DISPATCH (DIRECT EMAIL TO GMAIL)
   // --------------------------------------------------------------------------
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -574,18 +574,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
       playSynthSound(660, 'sine', 0.15);
 
-      // Construct mailto link
-      const mailtoUrl = `mailto:kamal.prajapati1@gmail.com?subject=${encodeURIComponent(
-        `[Portfolio Contact] ${subject || 'New Message from ' + name}`
-      )}&body=${encodeURIComponent(
-        `Hi Kamal,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-      )}`;
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>';
+      submitBtn.disabled = true;
 
-      showToast('Opening your email client to send message... ✉️');
-
-      setTimeout(() => {
+      // Send directly to FormSubmit API
+      fetch('https://formsubmit.co/ajax/kamal.prajapati1@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+          _subject: `[Portfolio] ${subject || 'New Message'} from ${name}`
+        })
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        submitBtn.innerHTML = originalBtnHTML;
+        submitBtn.disabled = false;
+        contactForm.reset();
+        playSynthSound(880, 'sine', 0.2);
+        showToast('Message sent directly to Kamal\'s inbox! ✉️');
+      })
+      .catch((err) => {
+        submitBtn.innerHTML = originalBtnHTML;
+        submitBtn.disabled = false;
+        // Fallback to mailto link
+        const mailtoUrl = `mailto:kamal.prajapati1@gmail.com?subject=${encodeURIComponent(
+          `[Portfolio Contact] ${subject || 'New Message from ' + name}`
+        )}&body=${encodeURIComponent(
+          `Hi Kamal,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
+        )}`;
         window.location.href = mailtoUrl;
-      }, 500);
+        showToast('Opening email client... ✉️');
+      });
     });
   }
 
